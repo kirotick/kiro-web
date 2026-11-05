@@ -143,6 +143,8 @@ const addIcon = (t, file) => {
 function rewriteLinks(t) {
   t = t.replace(/([A-Za-z0-9_-]+)\.dc\.html/g, (m, name) => LINK_TO[name] || PAGES[name] || m);
   for (const [from, to] of Object.entries(HOSTED)) t = t.split(from).join(to);
+  // Legal links: the design points "Privacy" at the contact page; the real policy is privacy.html.
+  t = t.replace(/href="contact\.html"([^>]*>)(Privacy policy|Privacy)</g, (m, a, w) => `href="privacy.html"${a}${w}<`);
   // The shop was renamed from KKC to KIRO LUX. Base64 image data is skipped (no letter, digit, + or / beside it).
   return t.replace(/(?<![A-Za-z0-9+\/])KKC(?![A-Za-z0-9+\/])/g, 'KIRO LUX');
 }

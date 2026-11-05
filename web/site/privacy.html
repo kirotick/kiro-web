@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KIRO privacy policy</title>
+<meta name="description" content="What data the KIRO website, POS app and KIRO Admin app handle, where it is kept, and how to have it deleted.">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#E30B1C">
+<link rel="canonical" href="https://kiro-pos.netlify.app/privacy.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FEF7E5;--card:#FFFFFF;--ink:#16262B;--mute:#4D6168;--line:#E7DCC4;--teal:#0B4A58}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 'Anek Latin',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif}
+header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;max-width:820px;margin:0 auto;padding:20px 16px}
+header a.logo{color:#E30B1C;text-decoration:none;font-weight:800;font-size:28px;letter-spacing:.02em}
+nav{display:flex;flex-wrap:wrap;gap:6px 16px}
+nav a{color:var(--teal);text-decoration:none;font-weight:600}
+main{max-width:820px;margin:0 auto 48px;padding:28px 20px;background:var(--card);border:1px solid var(--line);border-radius:16px}
+@media (min-width:860px){main{padding:40px 48px}}
+h1{font-size:clamp(30px,5vw,40px);line-height:1.15;margin:0 0 6px}
+h2{font-size:22px;margin:32px 0 8px;color:var(--teal)}
+.updated{color:var(--mute);margin:0 0 20px}
+a{color:var(--teal)}
+ul,ol{padding-left:22px}li{margin:4px 0}
+table{width:100%;border-collapse:collapse;margin:8px 0;font-size:16px}
+th,td{text-align:left;vertical-align:top;padding:10px 8px;border-bottom:1px solid var(--line)}
+th{color:var(--mute);font-weight:600}
+.note{background:#FFF1D6;border-left:4px solid #F4A51C;padding:12px 14px;border-radius:8px}
+.todo{background:#FDE2E4;color:#7A1018;padding:0 4px;border-radius:4px;font-weight:700}
+footer{max-width:820px;margin:0 auto 40px;padding:0 16px;color:var(--mute);font-size:15px}
+@media (max-width:560px){main{margin:0 12px 40px;padding:22px 16px}table,thead,tbody,tr,th,td{display:block}thead{display:none}td{border:0;padding:4px 0}tr{border-bottom:1px solid var(--line);padding:8px 0}td[data-l]::before{content:attr(data-l);display:block;color:var(--mute);font-weight:600;font-size:14px}}
+</style>
+</head>
+<body>
+<header><a class="logo" href="index.html" aria-label="KIRO home">KIRO</a><nav><a href="privacy.html">Privacy</a><a href="delete-account.html">Delete account</a><a href="contact.html">Contact</a></nav></header>
+<main>
+
+<h1>Privacy policy</h1>
+<p class="updated">Last updated 5 November 2026</p>
+<p>This policy covers the KIRO website, the KIRO POS app (in the browser) and the <strong>KIRO Admin</strong> app for Android and iPhone. KIRO is run by <span class="todo">[Legal name of the business]</span>, <span class="todo">[Registered address]</span> ("KIRO", "we"). Questions: <span class="todo">[privacy email address]</span>.</p>
+<p>KIRO is software for shops and restaurants. The shop decides what it records about its own customers and staff; for that data, the shop is responsible and KIRO handles it on the shop's behalf.</p>
+
+<h2>What we collect, and why</h2>
+<table>
+<thead><tr><th>Data</th><th>Where it is kept</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td data-l="Data"><strong>POS app</strong>: shop details, menu, bills, payments, expenses, staff names and PINs, and customer names or phone numbers if the shop types them in</td><td data-l="Where it is kept">On the shop's own device (browser storage). Not sent to KIRO unless the shop turns on cloud sign-in.</td><td data-l="Why">Billing, receipts, day close and reports</td></tr>
+<tr><td data-l="Data"><strong>KIRO Admin app login</strong>: login ID and password</td><td data-l="Where it is kept">Sent over HTTPS to the KIRO server. The password is stored only as a one-way hash; nobody can read it back.</td><td data-l="Why">Signing in</td></tr>
+<tr><td data-l="Data"><strong>Sign-in token</strong></td><td data-l="Where it is kept">On the phone, in the system's secure storage (Android Keystore, iPhone Keychain)</td><td data-l="Why">Keeping you signed in; removed when you sign out</td></tr>
+<tr><td data-l="Data"><strong>Business data shown in the app</strong>: sales, invoices, GST totals, payment modes, stock, staff activity (last active, bills today), and customer names or phones on invoices if the shop recorded them</td><td data-l="Where it is kept">KIRO server database (PostgreSQL, hosted by Neon in Singapore)</td><td data-l="Why">Showing the shop owner and managers their own business</td></tr>
+<tr><td data-l="Data"><strong>Ask KIRO questions</strong> (only if the shop's server has it switched on)</td><td data-l="Where it is kept">The question plus totals and item names go to an AI provider, which puts the figures into words</td><td data-l="Why">Plain-language answers. Customer names and phones, invoice numbers, staff names and individual bills are <strong>never</strong> sent.</td></tr>
+<tr><td data-l="Data"><strong>Messages</strong> you send us</td><td data-l="Where it is kept">Our email</td><td data-l="Why">Replying to you</td></tr>
+</tbody>
+</table>
+<p>The KIRO Admin app has <strong>no advertising and no analytics or tracking tools</strong>, and does not ask for your location, contacts, camera, microphone or photos. We do not sell data or share it for advertising.</p>
+
+<h2>Payments</h2>
+<p>KIRO does not take or hold money. A UPI payment goes straight from the customer's UPI app to the shop's bank account. KIRO cannot see bank accounts, so a UPI payment in KIRO is marked "confirmed by cashier, not verified" until the shop checks it against its bank statement.</p>
+
+<h2>Who else handles data</h2>
+<ul>
+<li><strong>Neon</strong>: hosts the KIRO server database (Singapore).</li>
+<li><strong>Netlify</strong>: serves this website and the POS app files.</li>
+<li><strong>An AI provider</strong> for Ask KIRO, only if it is switched on, and only the totals and item names described above.</li>
+<li>Authorities, when Indian law requires us to.</li>
+</ul>
+
+<h2>How long we keep it</h2>
+<p>Business data is kept while the shop's KIRO account is active. When an account is deleted, we delete its data within 30 days. Invoice records are the one exception: Indian GST law requires the <em>shop</em> to keep invoices (currently 72 months from the due date of the annual return, CGST Act section 36), so we give the shop an export first, and keep invoice records only if the shop asks us to keep them for it. Data on the shop's own device stays there until the shop clears it.</p>
+
+<h2>Your choices</h2>
+<ul>
+<li><strong>See, correct or delete</strong> your data: email <span class="todo">[privacy email address]</span>. Staff and customers of a shop can also ask the shop directly.</li>
+<li><strong>Delete a KIRO account</strong>: see <a href="delete-account.html">Delete your KIRO account</a>.</li>
+<li><strong>Complaints</strong>: write to <span class="todo">[privacy email address]</span>. We reply within 7 working days.</li>
+</ul>
+
+<h2>Security</h2>
+<p>Connections use HTTPS. Passwords are stored only as hashes, logins lock after repeated wrong passwords, and each shop can see only its own data. No system is perfectly secure; if we learn of a breach affecting your data, we will tell you and the authorities as Indian law requires. To report a security problem, see <a href="/.well-known/security.txt">security.txt</a>.</p>
+
+<h2>Children</h2>
+<p>KIRO is for businesses and is not meant for anyone under 18.</p>
+
+<h2>Changes</h2>
+<p>If this policy changes, we update the date above. Big changes are also announced in the apps.</p>
+
+</main>
+<footer>Last updated 5 November 2026. KIRO website, POS app and KIRO Admin app.</footer>
+</body>
+</html>
