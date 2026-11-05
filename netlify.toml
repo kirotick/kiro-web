@@ -1,6 +1,11 @@
 # Tells Netlify where the website files are. No build step is needed: it is plain HTML, CSS and JavaScript.
 [build]
   publish = "web/site"
+  # The POS app (/app/) comes from kirotick/kiro-pos at the tag in pos-version.txt.
+  command = "node tools/fetch-pos.mjs"
+
+[build.environment]
+  NODE_VERSION = "22"
 
 # Serve the files exactly as they are. Netlify's HTML post-processing ("Pretty URLs") re-saved
 # index.html with broken quotes, which unstyled the "Book a free demo" button on the Home page.

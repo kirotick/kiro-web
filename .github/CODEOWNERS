@@ -1,0 +1,6 @@
+# Code owners: their review is requested automatically on changes to these paths.
+* @kirotick
+/netlify.toml @kirotick
+/pos-version.txt @kirotick
+/tools/ @kirotick
+/.github/ @kirotick
